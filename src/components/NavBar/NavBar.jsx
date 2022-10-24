@@ -7,9 +7,9 @@ const NavBar = (props) =>{
 
     return (<div className="sidenav">
         <SearchBar handleInput={handleInput} searchTerm={searchTerm}/>
-        <Checkbox checkInput={highAlcohol} handleInput={handleABV} title="High ABV ( > 6%) "/>
-        <Checkbox checkInput={highAcidity} handleInput={handleAcidity} title="Acidic (ph < 4) "/>
-        <Checkbox checkInput={classicRange} handleInput={handleClassicRange} title ="Classic Range"/>
+        <Checkbox checkInput={highAlcohol} handleInput={handleABV} title="High ABV ( > 6%)  "/>
+        <Checkbox checkInput={highAcidity} handleInput={handleAcidity} title="Acidic (ph < 4)  "/>
+        <Checkbox checkInput={classicRange} handleInput={handleClassicRange} title ="Classic Range  "/>
     </div>)
 }
 

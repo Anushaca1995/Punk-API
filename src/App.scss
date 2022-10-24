@@ -11,7 +11,10 @@
     width: 20%;
     border: 1px solid black;
     min-height: 1200px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .App-main {
     width: 80%;
@@ -75,5 +78,17 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width:500px) {
+  .App {
+      flex-direction: column;
+      .App-Nav{
+        min-height: 30px;
+        width: 100%;
+      }
+      .App-main {
+        width: 100%;
+      }
   }
 }
