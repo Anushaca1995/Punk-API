@@ -1,0 +1,73 @@
+@use "./assets/scss/_variables"as *;
+
+.App {
+  text-align: center;
+  display: flex;
+  .App-Nav{
+    background-color: rgb(100, 14, 69);
+    color: bisque;
+    font-size: 30px;
+    padding: 45px;
+    border: 1px solid black;
+  }
+  .App-main {
+    background-color: bisque;
+    font-size: calc(10px + 2vmin);
+    color: $color-black;
+    animation-name: example;
+    animation-duration: 100s;
+    animation-delay: 2s;
+    @keyframes example {
+      0% {
+        background-color: rgb(191, 202, 45);
+        color: rgb(6, 3, 48);
+        left: 0px;
+        top: 0px;
+      }
+
+      25% {
+        background-color: rgb(157, 198, 107);
+        color: rgb(55, 11, 35);
+        left: 200px;
+        top: 0px;
+      }
+
+      50% {
+        background-color: rgb(118, 118, 185);
+        color: rgb(18, 2, 40);
+        left: 200px;
+        top: 200px;
+      }
+
+      75% {
+        background-color: rgb(80, 145, 157);
+        color: rgb(56, 6, 6);
+        left: 0px;
+        top: 200px;
+      }
+
+      100% {
+        background-color: rgb(174, 85, 143);
+        color: rgb(3, 32, 29);
+        left: 0px;
+        top: 0px;
+      }
+    }
+  }
+
+  .App-beerCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
