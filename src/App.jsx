@@ -8,6 +8,7 @@ function App() {
   const [searchTerm,setSearchTerm] = useState('');
   const [highAlcohol,setHighAlcohol] = useState(false);
   const [highAcidity,setHighAcidity] = useState(false);
+  const [classicRange,setClassicRange] = useState(false);
 
   const handleInput = (event) =>{
     setSearchTerm(event.target.value);
@@ -18,6 +19,9 @@ function App() {
   }
   const handleAcidity = () => {
     setHighAcidity(!highAcidity);
+  }
+  const handleClassicRange = () => {
+    setClassicRange(!classicRange);
   }
 
   let filteredSearch ="";
@@ -31,13 +35,17 @@ function App() {
     case highAcidity:
         filteredSearch=beersData.filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()) && character.ph<4);
         break;
+    case classicRange:
+      filteredSearch=beersData.filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()) && character.first_brewed.split("/")[1]<2010);
+      break;
     default:
       filteredSearch=beersData.filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()));
   }
   return (
     <div className="App">
       <div className='App-Nav'>
-        <NavBar handleInput={handleInput} searchTerm={searchTerm} highAlcohol={highAlcohol} handleABV={handleABV} highAcidity={highAcidity} handleAcidity={handleAcidity}/>
+        <NavBar handleInput={handleInput} searchTerm={searchTerm} highAlcohol={highAlcohol} handleABV={handleABV} 
+        highAcidity={highAcidity} handleAcidity={handleAcidity} classicRange={classicRange} handleClassicRange={handleClassicRange}/>
       </div>
       <div className="App-main">
         <h1>Punk API</h1>
