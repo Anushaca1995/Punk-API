@@ -1,0 +1,51 @@
+// AlbumTiles.scss
+@use "../../assets/scss/_variables"as *;
+
+.beers-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid rgba($color-black, 0.25);
+    box-shadow: 0px 10px 20px rgba($color-black, 0.25);
+    background-color: bisque;
+    &__name{
+        font-size: 25px;
+        padding: 10px;
+        margin:10px;
+        color:deeppink;
+    }
+    &__tag{
+        font-size: 20px;
+        padding: 5px;
+        margin:5px;
+        color:rgb(49, 7, 30);
+    }
+    &__desc{
+        font-size: 15px;
+        padding: 5px;
+        margin:5px;
+        color:rgb(49, 7, 30);
+    }
+    &__image{
+        margin-left: 105px;
+        width:90px;
+        height:300px;
+        display: absolute;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .beers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-bottom: 20px;
+
+
+    }
+}
