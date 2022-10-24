@@ -7,10 +7,12 @@
     background-color: rgb(100, 14, 69);
     color: bisque;
     font-size: 30px;
-    padding: 45px;
+    padding: 30px;
+    width: 20%;
     border: 1px solid black;
   }
   .App-main {
+    width: 80%;
     background-color: bisque;
     font-size: calc(10px + 2vmin);
     color: $color-black;
@@ -58,7 +60,7 @@
   .App-beerCards {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
   }
 }
