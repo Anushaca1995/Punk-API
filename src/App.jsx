@@ -48,7 +48,7 @@ function App() {
         highAcidity={highAcidity} handleAcidity={handleAcidity} classicRange={classicRange} handleClassicRange={handleClassicRange}/>
       </div>
       <div className="App-main">
-        <h1>Punk API</h1>
+        <h1 className='App-main--header'>Punk API</h1>
         <Main className="App-beerCards" beersData={filteredSearch} />
       </div>
     </div>

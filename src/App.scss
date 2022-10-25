@@ -26,6 +26,10 @@
     animation-name: example;
     animation-duration: 100s;
     animation-delay: 2s;
+    &--header{
+      color:midnightblue;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
     @keyframes example {
       0% {
         background-color: rgb(191, 202, 45);
@@ -86,6 +90,8 @@
       .App-Nav{
         min-height: 30px;
         width: 100%;
+        padding:0;
+        padding-bottom: 20px;
       }
       .App-main {
         width: 100%;

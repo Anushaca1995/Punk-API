@@ -7,7 +7,8 @@ const CardList = (props) =>{
         beersImage={beers.image_url} />
     })
     return (
-        <div className="card-list">{beersArray}</div>
+
+        <div className="card-list">{beersArray.length==0 && <h2 className="card-list--noMatch">Sorry 🥺 <br></br>Matching Not Found  </h2>}{beersArray}</div>
     )
 }
 export default CardList;
