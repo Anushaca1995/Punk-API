@@ -6,7 +6,8 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    width: 300px;
+    width: 200px;
+    height:700px;
     margin: 20px;
     padding: 10px;
     border-radius: 15px;
@@ -32,9 +33,9 @@
         color:rgb(49, 7, 30);
     }
     &__image{
-        margin-left: 105px;
-        width:90px;
-        height:300px;
+        margin-left: 70px;
+        width:60px;
+        height:200px;
         display: absolute;
     }
 }
