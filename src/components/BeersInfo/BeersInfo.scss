@@ -1,20 +1,18 @@
 // AlbumTiles.scss
 @use "../../assets/scss/_variables"as *;
 
-.beers-card {
+.beer {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    width: 250px;
-    height:600px;
-    margin: 20px;
-    padding: 10px;
+    height: 100%;
+    padding: 20px;
     border-radius: 15px;
     border: 1px solid rgba($color-black, 0.25);
     box-shadow: 0px 10px 20px rgba($color-black, 0.25);
     background-color: bisque;
-    &__name{
+    &__beerName{
         font-size: 25px;
         padding: 10px;
         margin:10px;
@@ -32,20 +30,11 @@
         margin:5px;
         color:rgb(49, 7, 30);
     }
-    &__image{
+    &__img{
+        margin-left: 590px;
         width:60px;
         height:200px;
         display: absolute;
     }
 }
 
-@media screen and (min-width: 992px) {
-    .beers {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-        margin-bottom: 20px;
-
-
-    }
-}

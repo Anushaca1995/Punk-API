@@ -1,5 +1,7 @@
 import "./CardList.scss";
 import Card from "../../components/Card/Card";
+import {Link} from "react-router-dom";
+
 const CardList = (props) =>{
     const {beersData, checkPH} = props;
     let beersArray;
@@ -7,8 +9,11 @@ const CardList = (props) =>{
         beersArray=beersData.map( (beers) =>{
             console.log(beers.name+"  "+beers.ph);
             if (beers.ph <4 && beers.ph!=null){
-                return (<Card key={beers.id}  beersName={beers.name} beersTag={beers.tagline} beersDesc={beers.description}
-                    beersImage={beers.image_url} />)
+                return (
+
+                <Card key={beers.id} beersId={beers.id}   beersName={beers.name} beersTag={beers.tagline} beersDesc={beers.description}
+                    beersImage={beers.image_url} />
+                    )
             }
             
         })
@@ -19,7 +24,7 @@ const CardList = (props) =>{
                 let lastIndex=beers.description.indexOf(".",130)+1;
                 desc=beers.description.slice(0,lastIndex);
             }
-            return <Card key={beers.id}  beersName={beers.name} beersTag={beers.tagline} beersDesc={desc}
+            return <Card key={beers.id} beersId={beers.id}  beersName={beers.name} beersTag={beers.tagline} beersDesc={desc}
             beersImage={beers.image_url} />
         })
     }
