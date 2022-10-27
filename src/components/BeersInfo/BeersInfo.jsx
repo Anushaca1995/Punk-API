@@ -13,6 +13,7 @@ const BeersInfo = () => {
   let url;
   let name, description, image_url, tagline;
   const getBeer = async () => {
+   
     url = `https://api.punkapi.com/v2/beers/${beerId}`;
     console.log(url);
     const res = await fetch(url);

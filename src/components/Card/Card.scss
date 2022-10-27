@@ -2,10 +2,12 @@
 @use "../../assets/scss/_variables"as *;
 
 .beers-card {
+    background-size: 250px 600px;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    flex-wrap: wrap;
     width: 250px;
     height:600px;
     margin: 20px;
@@ -13,7 +15,7 @@
     border-radius: 15px;
     border: 1px solid rgba($color-black, 0.25);
     box-shadow: 0px 10px 20px rgba($color-black, 0.25);
-    background-color: bisque;
+    background-color: rgb(126, 206, 216);
     &__name{
         font-size: 25px;
         padding: 10px;
@@ -24,13 +26,14 @@
         font-size: 20px;
         padding: 5px;
         margin:5px;
-        color:rgb(49, 7, 30);
+        color:rgb(147, 24, 91);
     }
     &__desc{
-        font-size: 15px;
+        font-family: 'Libre Baskerville', serif;
+        font-size: 14px;
         padding: 5px;
         margin:5px;
-        color:rgb(49, 7, 30);
+        color:rgb(181, 65, 129);
     }
     &__image{
         width:60px;
@@ -39,13 +42,9 @@
     }
 }
 
-@media screen and (min-width: 992px) {
-    .beers {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-        margin-bottom: 20px;
-
-
+@media screen and (max-width: 1250px) {
+    .beers-card{
+        width: 350px;
+        height:600px;
     }
 }
