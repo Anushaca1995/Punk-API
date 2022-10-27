@@ -1,6 +1,5 @@
 import './App.scss';
 import Main from "./container/Main/Main";
-import beersData from "./data/beers.js";
 import { useEffect, useState } from 'react';
 import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -59,23 +58,6 @@ function App() {
     setClassicRange(!classicRange);
   }
 
-  let filteredSearch = "";
-  switch (true) {
-    case (highAlcohol && highAcidity):
-      filteredSearch = beersData.filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()) && character.abv > 6 && character.ph < 4);
-      break;
-    case highAlcohol:
-      filteredSearch = beersData.filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()) && character.abv > 6);
-      break;
-    case highAcidity:
-      filteredSearch = beersData.filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()) && character.ph < 4);
-      break;
-    case classicRange:
-      filteredSearch = beersData.filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()) && character.first_brewed.split("/")[1] < 2010);
-      break;
-    default:
-      filteredSearch = beersData.filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()));
-  }
   return (
     <Router>
 
