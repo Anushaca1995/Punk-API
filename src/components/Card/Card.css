@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+.beers-card {
+  background-size: 250px 600px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 600px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid rgba(45, 52, 54, 0.25);
+  box-shadow: 0px 10px 20px rgba(45, 52, 54, 0.25);
+  background: url("../../assets/images/bgnew.jpg") no-repeat;
+  background-size: 300px 650px;
+}
+.beers-card__name {
+  font-size: 25px;
+  padding: 10px;
+  margin: 10px;
+  color: rgba(44, 38, 206, 0.968);
+}
+.beers-card__tag {
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+  color: rgb(147, 24, 91);
+}
+.beers-card__desc {
+  font-family: "Libre Baskerville", serif;
+  font-size: 14px;
+  padding: 5px;
+  margin: 5px;
+  color: rgb(181, 65, 129);
+}
+.beers-card__image {
+  width: 60px;
+  height: 200px;
+  display: absolute;
+}
+
+@media screen and (max-width: 1250px) {
+  .beers-card {
+    width: 350px;
+    height: 600px;
+    background-size: 400px 650px;
+  }
+}/*# sourceMappingURL=Card.css.map */

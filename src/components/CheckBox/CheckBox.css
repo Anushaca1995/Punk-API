@@ -1,0 +1,10 @@
+.checkbox {
+  margin-top: 20px;
+  padding: 5px;
+  color: bisque;
+  font-size: 20px;
+  font-weight: bold;
+}
+.checkbox__input {
+  padding: 2px;
+}/*# sourceMappingURL=CheckBox.css.map */

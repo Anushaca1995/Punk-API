@@ -12,7 +12,7 @@ function App() {
   const [classicRange, setClassicRange] = useState(false);
   const [cRVal, setCRVal] = useState();
   const [beers, setBeers] = useState();
-  const getBeer = async (highAlcohol, cRVal, classicRange, abv) => {
+  const getBeer = async (highAlcohol, cRVal, classicRange, abv, searchTerm) => {
     const urlpath = `https://api.punkapi.com/v2/beers?`;
     let url = urlpath;
     if (highAlcohol) {
@@ -34,6 +34,14 @@ function App() {
       }
 
     }
+    if (searchTerm != '') {
+      if (url != urlpath) {
+        url += `&beer_name=${searchTerm}`;
+      } else {
+        url += `beer_name=${searchTerm}`;
+      }
+
+    }
     console.log(url);
     const res = await fetch(url);
     const data = await res.json();
@@ -42,10 +50,11 @@ function App() {
   };
   
   useEffect(() => {
-    getBeer(highAlcohol, cRVal, classicRange, abv);
-  }, [highAlcohol, cRVal, classicRange, abv]);
+    getBeer(highAlcohol, cRVal, classicRange, abv, searchTerm);
+  }, [highAlcohol, cRVal, classicRange, abv, searchTerm]);
   const handleInput = (event) => {
     setSearchTerm(event.target.value);
+    console.log("Search term "+searchTerm);
   }
 
   const handleABV = () => {
@@ -60,17 +69,15 @@ function App() {
 
   return (
     <Router>
-
-
       <Routes>
         <Route
           path="/Punk-API"
           element={
             <div className="App">
-              <div className='App-Nav'>
-                <NavBar handleInput={handleInput} searchTerm={searchTerm} highAlcohol={highAlcohol} handleABV={handleABV}
-                  highAcidity={highAcidity} handleAcidity={handleAcidity} classicRange={classicRange} handleClassicRange={handleClassicRange} />
-              </div>
+            <div className='App-Nav'>
+              <NavBar handleInput={handleInput} searchTerm={searchTerm} highAlcohol={highAlcohol} handleABV={handleABV}
+                highAcidity={highAcidity} handleAcidity={handleAcidity} classicRange={classicRange} handleClassicRange={handleClassicRange} />
+            </div>
               <div className="App-main">
                 <h1 className='App-main--header'>Punk API</h1>
                 {beers && (
@@ -78,7 +85,7 @@ function App() {
                     beersData={beers} checkPH={highAcidity}
                   />)}
               </div>
-            </div>
+              </div>
           }
         ></Route>
          <Route
@@ -86,7 +93,6 @@ function App() {
   element={<BeersInfo />}
 />
       </Routes>
-
     </Router>
   );
 }

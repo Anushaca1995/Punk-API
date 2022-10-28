@@ -1,0 +1,13 @@
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}/*# sourceMappingURL=NavBar.css.map */

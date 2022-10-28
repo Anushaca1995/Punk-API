@@ -15,12 +15,14 @@
     border-radius: 15px;
     border: 1px solid rgba($color-black, 0.25);
     box-shadow: 0px 10px 20px rgba($color-black, 0.25);
-    background-color: rgb(126, 206, 216);
+    //background-color: rgb(126, 206, 216);
+    background: url("../../assets/images/bgnew.jpg") no-repeat;
+    background-size: 300px 650px;
     &__name{
         font-size: 25px;
         padding: 10px;
         margin:10px;
-        color:deeppink;
+        color:rgba(44, 38, 206, 0.968);
     }
     &__tag{
         font-size: 20px;
@@ -46,5 +48,6 @@
     .beers-card{
         width: 350px;
         height:600px;
+        background-size: 400px 650px;
     }
 }

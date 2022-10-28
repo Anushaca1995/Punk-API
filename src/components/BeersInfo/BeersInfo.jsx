@@ -11,7 +11,7 @@ const BeersInfo = () => {
   const [set, Setset]=useState(true);
   console.log(beerId);
   let url;
-  let name, description, image_url, tagline;
+  let name, description, image_url, tagline, abv, ph, first_brewed;
   const getBeer = async () => {
    
     url = `https://api.punkapi.com/v2/beers/${beerId}`;
@@ -30,6 +30,9 @@ const BeersInfo = () => {
         tagline=beer[0].tagline;
         description=beer[0].description;
         image_url=beer[0].image_url;
+        abv=beer[0].abv;
+        ph=beer[0].ph;
+        first_brewed=beer[0].first_brewed;
     }
    
   return (
@@ -38,6 +41,12 @@ const BeersInfo = () => {
             <img className="beer__img" src={image_url}/>
             <h2 className="beer__tag">{tagline}</h2>
             <p className="beer__desc">{description}</p>
+            <h2 className="beer__fact">Facts</h2>
+        <ul className="beer__fact-list">
+          <li>ABV : {abv} </li>
+          <li>PH Value : {ph} </li>
+          <li>Brewed Before : {first_brewed} </li>
+        </ul>
     </article>
   );
 };
