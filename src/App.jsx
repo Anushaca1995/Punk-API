@@ -12,15 +12,17 @@ function App() {
   const [classicRange, setClassicRange] = useState(false);
   const [cRVal, setCRVal] = useState();
   const [beers, setBeers] = useState();
-  const getBeer = async (highAlcohol, cRVal, classicRange, abv, searchTerm) => {
-    const urlpath = `https://api.punkapi.com/v2/beers?`;
+  const [numberOfBeer, setNumberOfBeer] = useState(10);
+
+  const getBeer = async (highAlcohol, cRVal, classicRange, abv, searchTerm, numberOfBeer) => {
+    const urlpath = `https://api.punkapi.com/v2/beers?per_page=${numberOfBeer}`;
     let url = urlpath;
     if (highAlcohol) {
       setAbv(6);
     }
     console.log("Checked alcohol? " + highAlcohol + " ABV=" + abv);
     if (highAlcohol && abv != undefined) {
-      url = urlpath + `abv_gt=${abv}`;
+      url = urlpath + `&abv_gt=${abv}`;
     }
     if (classicRange) {
       setCRVal("10/2010");
@@ -50,12 +52,16 @@ function App() {
   };
   
   useEffect(() => {
-    getBeer(highAlcohol, cRVal, classicRange, abv, searchTerm);
-  }, [highAlcohol, cRVal, classicRange, abv, searchTerm]);
+    getBeer(highAlcohol, cRVal, classicRange, abv, searchTerm, numberOfBeer);
+  }, [highAlcohol, cRVal, classicRange, abv, searchTerm, numberOfBeer]);
   const handleInput = (event) => {
     setSearchTerm(event.target.value);
     console.log("Search term "+searchTerm);
   }
+
+  const handleInputChange = (event) => {
+    setNumberOfBeer(event.target.value);
+  };
 
   const handleABV = () => {
     setHighAlcohol(!highAlcohol);
@@ -75,7 +81,7 @@ function App() {
           element={
             <div className="App">
             <div className='App-Nav'>
-              <NavBar handleInput={handleInput} searchTerm={searchTerm} highAlcohol={highAlcohol} handleABV={handleABV}
+              <NavBar numberOfBeer={numberOfBeer} handleInputChange={handleInputChange} handleInput={handleInput} searchTerm={searchTerm} highAlcohol={highAlcohol} handleABV={handleABV}
                 highAcidity={highAcidity} handleAcidity={handleAcidity} classicRange={classicRange} handleClassicRange={handleClassicRange} />
             </div>
               <div className="App-main">

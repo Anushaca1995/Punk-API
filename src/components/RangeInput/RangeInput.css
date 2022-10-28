@@ -1,0 +1,9 @@
+.range-input {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+  gap: 0.5rem;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}/*# sourceMappingURL=RangeInput.css.map */
