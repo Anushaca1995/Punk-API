@@ -26,14 +26,14 @@
   font-size: 20px;
   padding: 5px;
   margin: 5px;
-  color: rgb(147, 24, 91);
+  color: rgb(87, 24, 147);
 }
 .beers-card__desc {
   font-family: "Libre Baskerville", serif;
   font-size: 14px;
   padding: 5px;
   margin: 5px;
-  color: rgb(181, 65, 129);
+  color: rgb(82, 11, 50);
 }
 .beers-card__image {
   width: 60px;

@@ -3,7 +3,7 @@ import Main from "./container/Main/Main";
 import { useEffect, useState } from 'react';
 import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import BeersInfo from './components/BeersInfo/BeersInfo';
+import BeersInfo from './container/BeersInfo/BeersInfo';
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [highAlcohol, setHighAlcohol] = useState(false);

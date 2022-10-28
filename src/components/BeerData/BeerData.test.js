@@ -1,28 +1,25 @@
 import { render, screen } from "@testing-library/react";
-import BeersInfo from "./BeersInfo";
+import BeerData from "./BeerData";
 
 it("should render the form", () => {
-    // 1. Arrange
-    render(<BeersInfo />);
-  
-    // 2. Act
+    render(<BeerData />);
     const beer = screen.getByRole("article");
-  
-    // 3. Assert
     expect(beer).toBeInTheDocument();
   });
 
   it("should render the header h1", () => {
-    render(<BeersInfo />);
+    render(<BeerData />);
     const heading = screen.getByRole('heading', {level: 1})
     expect(heading).toBeInTheDocument();
   
   });
 
   it("should render the header h2", () => {
-    render(<BeersInfo />);
-    const head = screen.getByRole('heading', {level: 2})
-    expect(head).toBeInTheDocument();
+    render(<BeerData />);
+    const head = screen.getAllByRole('heading', {level: 2})
+    head.forEach(input => {
+      expect(input).toBeInTheDocument();
+    });
   
   });
   
