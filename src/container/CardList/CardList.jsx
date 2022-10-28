@@ -9,7 +9,6 @@ const CardList = (props) =>{
             console.log(beers.name+"  "+beers.ph);
             if (beers.ph <4 && beers.ph!=null){
                 return (
-
                 <Card key={beers.id} beersId={beers.id}   beersName={beers.name} beersTag={beers.tagline} beersDesc={beers.description}
                     beersImage={beers.image_url} />
                     )

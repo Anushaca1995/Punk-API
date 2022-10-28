@@ -37,7 +37,7 @@ const BeersInfo = () => {
     }
    
   return (
-   <BeerData name={name} tagline={tagline} image_url={image_url} description={description} food_pairing={food_pairing} brewers_tip={brewers_tips} abv={abv} ph={ph} first_brewed ={first_brewed} />
+   <BeerData name={name} tagline={tagline} image_url={image_url} description={description} food_pairing={food_pairing} brewers_tips={brewers_tips} abv={abv} ph={ph} first_brewed ={first_brewed} />
   );
 };
 
