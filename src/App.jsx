@@ -29,20 +29,11 @@ function App() {
     }
     console.log("Checked:" + classicRange + ", cr=" + cRVal);
     if (classicRange && cRVal != undefined) {
-      if (url != urlpath) {
         url += `&brewed_before=${cRVal}`;
-      } else {
-        url += `brewed_before=${cRVal}`;
-      }
 
     }
     if (searchTerm != '') {
-      if (url != urlpath) {
         url += `&beer_name=${searchTerm}`;
-      } else {
-        url += `beer_name=${searchTerm}`;
-      }
-
     }
     console.log(url);
     const res = await fetch(url);
