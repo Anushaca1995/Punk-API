@@ -1,6 +1,5 @@
 import "./CardList.scss";
 import Card from "../../components/Card/Card";
-import {Link} from "react-router-dom";
 
 const CardList = (props) =>{
     const {beersData, checkPH} = props;
