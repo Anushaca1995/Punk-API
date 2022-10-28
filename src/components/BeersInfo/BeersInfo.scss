@@ -21,13 +21,13 @@ body{
         box-shadow: 0px 10px 20px rgba($color-black, 0.25);
         background: url("../../assets/images/bgnew.jpg") no-repeat;
         &__beerName{
-            font-size: 25px;
+            font-size: 35px;
             padding: 10px;
             margin:10px;
             color:deeppink;
         }
         &__tag{
-            font-size: 20px;
+            font-size: 25px;
             padding: 5px;
             margin:5px;
             color:rgb(119, 14, 72);
@@ -47,6 +47,7 @@ body{
         }
         &__fact{
                 color: rgb(18, 15, 109);
+                font-size: 20px;
                 &-list{
                     color: rgb(18, 15, 109);
                     list-style-type: none;

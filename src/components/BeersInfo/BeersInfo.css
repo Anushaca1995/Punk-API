@@ -22,13 +22,13 @@ body .beer {
   background: url("../../assets/images/bgnew.jpg") no-repeat;
 }
 body .beer__beerName {
-  font-size: 25px;
+  font-size: 35px;
   padding: 10px;
   margin: 10px;
   color: deeppink;
 }
 body .beer__tag {
-  font-size: 20px;
+  font-size: 25px;
   padding: 5px;
   margin: 5px;
   color: rgb(119, 14, 72);
@@ -48,6 +48,7 @@ body .beer__img {
 }
 body .beer__fact {
   color: rgb(18, 15, 109);
+  font-size: 20px;
 }
 body .beer__fact-list {
   color: rgb(18, 15, 109);
